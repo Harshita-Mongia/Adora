@@ -56,6 +56,7 @@ body{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 1000;
     backdrop-filter: blur(8px);
 }
@@ -89,6 +90,10 @@ body{
     transition: all 0.3s ease;
 }
 
+#navbar li a:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 #navbar li a:hover,
 #navbar li a.active{
     color: white;
@@ -118,4 +123,58 @@ body{
 
 #navbar li a:hover i {
     transform: scale(1.2);
+}
+
+#hero{
+    position: relative;
+    background-image: url(./hero4.png);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #088178;
+}
+
+#hero button{
+    background-image: url(./button.png);
+    background-color: transparent;
+    color: #088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#hero button:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {              
+  #hero {
+    padding: 0 40px;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #hero button {
+    padding: 12px 50px;
+    background-size: contain;
+  }
 }
